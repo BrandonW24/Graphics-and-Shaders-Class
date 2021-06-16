@@ -1,0 +1,3 @@
+
+0(86) : error C1503: undefined variable "vMCposition"
+

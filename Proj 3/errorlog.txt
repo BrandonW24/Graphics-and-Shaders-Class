@@ -1,0 +1,4 @@
+
+0(123) : error C1038: declaration of "x" conflicts with previous declaration at 0(102)
+0(124) : error C1038: declaration of "y" conflicts with previous declaration at 0(103)
+

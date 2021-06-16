@@ -1,0 +1,2 @@
+C:\Users\15032\Desktop\cs457\final\Debug\Sample.exe
+C:\Users\15032\Desktop\cs457\final\Debug\Sample.pdb

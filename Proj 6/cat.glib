@@ -1,0 +1,116 @@
+##OpenGL GLIB
+
+Perspective 70
+LookAt 3 5 3  0 0 0  0 1 0
+
+CubeMap 6 n_B.bmp n_D.bmp  n_L.bmp p_F.bmp   p_R.bmp p_U.bmp
+
+Vertex    Cubetexture.vert
+Fragment  Cubetexture.frag
+Program   Texture  TexUnit 6
+
+Texture2D  6  n_B.bmp
+QuadYZ 5. 5. 10 10
+
+Texture2D  6  n_L.bmp
+QuadYZ -5. 5. 10
+
+Texture2D  6  p_U.bmp
+QuadXZ 5. 5. 10 10
+
+Texture2D  6  n_D.bmp
+QuadXZ -5. 5. 10 10
+
+Texture2D  6  p_R.bmp
+QuadXY 5. 5. 10 10
+
+Texture2D  6  p_F.bmp
+QuadXY -5. 5. 10 10
+
+Vertex    Cubetexture.vert
+Fragment  Cubetexture.frag
+Program   grass		TexUnit 6
+Texture2D  6  grass.bmp
+DiskXY
+
+Vertex    Cubetexture.vert
+Fragment  Cubetexture.frag
+Program   Well		TexUnit 6
+Texture2D  6  stone.bmp
+PushMatrix
+Translate 0 -1.65 0
+Obj Well.obj
+
+Vertex    Cubetexture.vert
+Fragment  Cubetexture.frag
+Program   PineTree		TexUnit 6
+PushMatrix
+Translate 0 -1.65 0
+Texture2D  6  pine_tree_tex.bmp
+Obj PineTree.obj
+
+
+Vertex		snow.vert
+Fragment	snow.frag
+Program		Snow							\
+	uAnimateStyle <true>					\
+	uAnimate <false>						\
+	uKa <0. 0.5 1.0>                        \
+	uKd <0. 0.5 1.0>                        \
+	uGrAmp <0. 0.4 1.>					    \
+    uFloorFreq <0.2 0.3 1.>				\
+	uPattAmp <0. 0.4 1.>					\
+    uPattFreq <0.2 4.5 20.0>				\
+	uNoiseAmp <0. 0.4 2.4>					\
+    uNoiseFreq <0.2 2. 10.>					\
+	uLightX <-20. 5. 20.>                   \
+	uLightY <-20. 10. 20.>                  \
+	uLightZ <-20. 20. 20.>                  \
+	uGlobeHeight <-3. 0.5 1.>				\
+	uUseChromaDepth <false>                 \
+	uTol   <0. 0. 1.>						\
+	uAlpha <0. 0. 1.>						\
+	uChromaBlue <-5.  -4.  0.>              \
+    uChromaRed  <-3.  -2.5  2.> 
+
+JitterCloud 50 50 50
+
+Vertex		texture.vert
+Fragment	texture.frag
+Program		Globe	 uTexUnit 6				\
+	uGlobeStyle <true>						\
+	uKa <0. 0.5 1.0>                        \
+	uKd <0. 0.5 1.0>                        \
+	uKs <0. 0.3 1.0>                        \
+	uShininess <1. 10. 2000.>               \
+	uGrAmp <0. 0.4 1.0>						\
+    uFloorFreq <0.2 0.3 1.0>				\
+	uPattAmp <0. 0.4 1.0>					\
+    uPattFreq <0.2 4.5 20.0>				\
+	uNoiseAmp <0. 0. 0.>					\
+    uNoiseFreq <0.2 0.2 0.2>				\
+	uLightX <-20. 5. 20.>                   \
+	uLightY <-20. 10. 20.>                  \
+	uLightZ <-20. 20. 20.>                  \
+	uGlobeHeight <-3. 0.5 1.>				\
+	uSpecularColor {1. 1. 1. 1.}			
+
+Texture2D 6 grass.bmp
+Sphere 2
+
+
+Vertex    Cubetexture.vert
+Fragment  Cubetexture.frag
+Program    WoodTexture  TexUnit 6
+PushMatrix
+Translate 0 -1.65 0
+Texture2D 6 wood3.bmp
+Box 5 2 4
+
+Vertex    Cubetexture.vert
+Fragment  Cubetexture.frag
+Program   WoodTexture  TexUnit 6
+PushMatrix
+Translate 0 -1.65 0
+Texture2D 6 wood3.bmp
+Box 7 .5 6

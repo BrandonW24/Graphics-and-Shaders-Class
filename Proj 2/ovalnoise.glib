@@ -1,0 +1,18 @@
+##OpenGL GLIB
+
+//Given in the program description
+
+LookAt  0 0 3  0 0 0  0 1 0
+Perspective 70
+
+Vertex   ovalnoise.vert
+Fragment ovalnoise.frag
+Program  OvalNoise                                              \
+        uAd <.01 .05 .5>  uBd <.01 .05 .5>                      \
+        uNoiseAmp <0. 0. 1.>  uNoiseFreq <0. 1. 10.>      	\
+        uTol <0. 0. 1.>						\
+        uAlpha <0. 1. 1.> 
+
+
+Color 0. .9 .0
+Sphere

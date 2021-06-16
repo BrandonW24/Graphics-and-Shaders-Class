@@ -1,0 +1,3 @@
+
+0(45) : error C7623: implicit narrowing of type from "vec4" to "float"
+
